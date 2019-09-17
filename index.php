@@ -8,7 +8,7 @@ require_once('database.php');
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>CHANGE MEBYE</title>
+        <title>CHANGE MEBYEHello</title>
     </head>
     <body>
 			<h1>Hello</h1>
