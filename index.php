@@ -57,7 +57,7 @@ if (!isset($email)) {
             <label>&nbsp;</label>
             <input type="submit" value="Register"><br>
         </form>
-        <p><a href="index.php">View Product List</a></p>
+        <p><a href="displayUsers.php">View Users In Database</a></p>
         
         </main>                
         <footer>

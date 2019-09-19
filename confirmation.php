@@ -1,4 +1,5 @@
 <?php
+require 'database.php';
 $firstName = filter_input(INPUT_POST, 'fName');
 $lastName = filter_input(INPUT_POST, 'lName');
 $userName = filter_input(INPUT_POST, 'uName');
@@ -26,5 +27,19 @@ include('index.php');
 }
 //todo:
 //compare username/email to database
+
+$query = "INSERT INTO drei_project_one(userName, firstName, lastName, email) "
+        .    "VALUES(:userName, :firstName, :lastName, :email);";
+
+$statement = $db->prepare($query);
+$statement->bindValue(':userName', $userName);
+$statement->bindValue(':firstName', $firstName);
+$statement->bindValue(':lastName', $lastName);
+$statement->bindValue(':email', $email);
+
+$statement->execute();
+$statement->closeCursor();
+        
+        
 ?>
 
